@@ -9,7 +9,7 @@
     "tw-prettier": "npm install -D prettier prettier-plugin-tailwindcss"
   },
   "keywords": [
-    "personal-portfolio",
+    "personal-website",
     "portfolio",
     "resume",
     "cv"
