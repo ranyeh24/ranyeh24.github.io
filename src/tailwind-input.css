@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth font-body;
+    color-scheme: light;
+  }
+
+  [data-theme-mode="dark"] {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply relative overflow-x-hidden bg-primary-light-1 text-base font-normal text-body-light-11 dark:bg-primary-dark-1 dark:text-body-dark-11;
+  }
+
+  [tabindex] {
+    @apply outline-none;
+  }
+
+  img {
+    @apply w-auto max-w-full;
+  }
+
+  a {
+    @apply text-balance break-words text-primary-light-11 no-underline hover:text-primary-light-10 dark:text-primary-dark-11 dark:hover:text-primary-dark-10;
+  }
+
+  a,
+  button {
+    @apply cursor-pointer;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    @apply border-0 bg-inherit text-inherit outline-none;
+  }
+
+  ul,
+  ol {
+    @apply list-none;
+  }
+
+  strong {
+    @apply font-bold text-body-light-12 dark:text-body-dark-12;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply m-0 text-pretty font-heading font-medium text-body-light-12 dark:text-body-dark-12;
+  }
+
+  h1 {
+    @apply text-5xl/tight;
+  }
+  h2 {
+    @apply text-4xl/tight;
+  }
+  h3 {
+    @apply text-3xl/tight;
+  }
+  h4 {
+    @apply text-2xl/tight;
+  }
+  h5 {
+    @apply text-xl/tight;
+  }
+  h6 {
+    @apply text-lg/tight;
+  }
+  h1 + p,
+  h2 + p,
+  h3 + p,
+  h4 + p,
+  h5 + p,
+  h6 + p {
+    @apply mt-6;
+  }
+
+  p {
+    @apply m-0 text-base text-inherit;
+  }
+  p + p {
+    @apply mt-5;
+  }
+  p + h1,
+  p + h2,
+  p + h3,
+  p + h4,
+  p + h5,
+  p + h6 {
+    @apply mt-8;
+  }
+}
+
+@layer components {
+  .rh-preload {
+    @apply fixed bottom-0 left-0 right-0 top-0 z-[2000] flex items-center justify-center bg-primary-light-1 dark:bg-primary-dark-2;
+  }
+
+  .rh-navbar {
+    @apply fixed left-0 top-0 z-[1020] flex h-20 w-full flex-wrap items-center justify-center border-b border-solid border-transparent bg-primary-light-1 transition-[height] duration-300 lg:h-[120px] dark:bg-primary-dark-1;
+  }
+  .rh-navbar-wrapper {
+    @apply relative flex h-full flex-wrap items-center justify-between;
+  }
+  .rh-navbar-brand {
+    @apply inline-flex;
+  }
+  .rh-navbar-collapse {
+    @apply invisible absolute right-0 top-full w-full scale-95 p-5 opacity-0 transition-[opacity,transform,visibility] duration-300 sm:max-w-xs xl:visible xl:static xl:w-auto xl:max-w-none xl:grow xl:scale-100 xl:px-12 xl:py-0 xl:opacity-100 xl:transition-none xl:duration-0;
+  }
+  .rh-navbar-menu {
+    @apply flex flex-col rounded-xl border border-solid border-body-light-a3 bg-primary-light-1 p-3 xl:flex-row xl:gap-8 xl:border-0 xl:bg-transparent xl:p-0 dark:border-body-dark-a3 dark:bg-primary-dark-1 dark:xl:bg-transparent;
+  }
+  .rh-navbar-link {
+    @apply inline-block w-full p-2 text-sm/normal font-medium text-body-light-11 hover:text-body-light-12 focus:text-body-light-12 xl:w-auto dark:text-body-dark-11 dark:hover:text-body-dark-12 dark:focus:text-body-dark-12;
+  }
+  .rh-navbar-toggler {
+    @apply rounded-lg p-2 text-[22px]/none text-body-light-11 hover:text-body-light-12 focus:text-primary xl:hidden dark:text-body-dark-11 dark:hover:text-body-dark-12;
+  }
+
+  [data-web-trigger="theme"] {
+    @apply inline-flex h-[42px] w-[42px] items-center justify-center rounded-full border-0 text-lg/none text-body-light-11 hover:text-body-light-12 focus:text-primary dark:text-body-dark-11 dark:hover:text-body-dark-12;
+  }
+
+  .rh-button {
+    @apply inline-block select-none text-nowrap rounded-full border border-solid border-transparent bg-inherit px-7 py-2.5 text-center font-medium leading-normal text-inherit no-underline hover:bg-inherit hover:text-inherit focus:bg-inherit focus:text-inherit;
+  }
+
+  .rh-button-primary {
+    @apply bg-primary text-white hover:bg-primary-light-10 hover:text-white focus:bg-primary-light-10 focus:text-white dark:hover:bg-primary-dark-10 dark:focus:bg-primary-dark-10;
+  }
+  .rh-button-white {
+    @apply bg-white text-black hover:bg-white/75 hover:text-black focus:bg-white/75 focus:text-black dark:hover:bg-white/75 dark:focus:bg-white/75;
+  }
+
+  .rh-button-outline-secondary {
+    @apply border-body-light-8 bg-transparent text-body-light-12 hover:bg-body-light-8 hover:text-body-light-12 focus:bg-body-light-8 focus:text-body-light-12 dark:border-body-dark-8 dark:text-body-dark-12 dark:hover:bg-body-dark-8 dark:hover:text-body-dark-12 dark:focus:bg-body-dark-5 dark:focus:text-body-dark-12;
+  }
+  .rh-button-outline-white {
+    @apply border-white bg-transparent text-white hover:bg-white hover:text-black focus:bg-white focus:text-black dark:hover:bg-white dark:hover:text-black dark:focus:bg-white dark:focus:text-black;
+  }
+
+  .rh-form-control {
+    @apply block w-full appearance-none rounded-lg border border-solid border-body-light-a6 bg-body-light-2 bg-clip-padding px-5 py-2.5 text-base font-normal text-body-light-11 outline-none focus:border-primary dark:border-body-dark-a6 dark:bg-body-dark-1 dark:text-body-dark-11;
+  }
+
+  .rh-section {
+    @apply relative py-14 md:py-24;
+  }
+
+  .rh-hero-img {
+    @apply mx-auto max-w-[556px];
+  }
+  .rh-hero-img img {
+    @apply w-full rounded-xl;
+  }
+  .rh-hero-subtitle {
+    @apply text-base font-bold uppercase tracking-wide text-primary;
+  }
+  .rh-hero-title {
+    @apply mx-auto max-w-4xl text-center text-5xl tracking-tight sm:text-7xl;
+  }
+  .rh-hero-text {
+    @apply mx-auto mt-0 max-w-3xl text-center text-lg tracking-tight;
+  }
+  .rh-hero-buttons {
+    @apply mx-auto flex max-w-xs flex-col flex-nowrap gap-4 sm:max-w-md sm:flex-row sm:justify-center;
+  }
+
+  .rh-shape-divider-top,
+  .rh-shape-divider-bottom {
+    @apply w-full overflow-hidden leading-none;
+  }
+  .rh-shape-divider-top svg,
+  .rh-shape-divider-bottom svg {
+    @apply block h-20 w-full md:h-[120px] xl:h-40;
+  }
+
+  .rh-section-title-wrapper {
+    @apply mx-auto mb-8 max-w-3xl text-center md:mb-12;
+  }
+  .rh-section-title {
+    @apply text-3xl tracking-tight sm:text-4xl md:text-5xl;
+  }
+  .rh-section-subtitle {
+    @apply mt-4 text-lg tracking-tight;
+  }
+
+  .rh-card {
+    @apply rounded-xl bg-primary-light-1 p-6 shadow-4 lg:p-7 dark:bg-primary-dark-2;
+  }
+
+  .rh-blog-article {
+    @apply block w-full;
+  }
+  .rh-blog-article .rh-blog-thumbnail {
+    @apply block aspect-video w-full;
+  }
+  .rh-blog-article .rh-blog-thumbnail img {
+    @apply h-full w-full rounded-xl object-cover object-center;
+  }
+  .rh-blog-article .rh-blog-title {
+    @apply text-xl leading-tight sm:text-2xl;
+  }
+  .rh-blog-article .rh-blog-title a {
+    @apply text-inherit hover:text-primary dark:hover:text-primary;
+  }
+
+  .rh-footer {
+    @apply bg-primary-dark-1 text-white/75 dark:bg-primary-dark-2;
+  }
+  .rh-footer-copyright {
+    @apply flex flex-col items-center gap-y-6 border-t border-solid border-body-dark-a3 py-8 text-center text-white/60 md:flex-row-reverse md:justify-between md:gap-y-0;
+  }
+
+  .rh-scroll-top {
+    @apply invisible fixed bottom-5 right-5 z-[1030] inline-flex h-[46px] w-[46px] items-center justify-center p-0 opacity-0 transition-[opacity,visibility];
+  }
+}
+
+@layer utilities {
+  .disabled,
+  :disabled {
+    @apply !pointer-events-none !select-none !opacity-65;
+  }
+
+  .rh-bg-body {
+    @apply bg-primary-light-1 dark:bg-primary-dark-1;
+  }
+  .rh-bg-body-secondary {
+    @apply bg-primary-light-2 dark:bg-primary-dark-2;
+  }
+
+  .rh-text-body {
+    @apply text-body-light-11 dark:text-body-dark-11;
+  }
+  .rh-text-emphasis {
+    @apply text-body-light-12 dark:text-body-dark-12;
+  }
+
+  .rh-container {
+    @apply container min-[1200px]:!max-w-[1200px];
+  }
+}
+
+.rh-navbar.isSticky {
+  @apply h-20 border-body-light-a3 bg-opacity-75 shadow-navbar backdrop-blur dark:border-body-dark-a3 dark:bg-opacity-75;
+}
+.rh-navbar.menuShow {
+  @apply bg-opacity-100 backdrop-blur-0 dark:bg-opacity-100;
+}
+.rh-navbar.menuShow .rh-navbar-collapse {
+  @apply visible scale-100 opacity-100;
+}
+.rh-navbar-link.isActive {
+  @apply text-primary;
+}
+
+#spotlight {
+  font-family: inherit;
+}
+
+.rh-scroll-top.isShow {
+  @apply visible opacity-70;
+}
+
+pre[class*="language-"] {
+  @apply my-5 rounded-xl bg-primary-dark-2 p-5;
+}
