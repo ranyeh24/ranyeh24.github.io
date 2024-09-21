@@ -100,4 +100,25 @@
 
   window.addEventListener("load", toggleScrollTop);
   document.addEventListener("scroll", toggleScrollTop);
+
+  // Calculate the estimated reading time
+  const crt = document.querySelectorAll(".crt[data-crt-target]");
+
+  window.addEventListener("load", function () {
+    crt.forEach((el) => {
+      const target = document.getElementById(el.dataset.crtTarget);
+
+      if (!target) {
+        return;
+      }
+
+      const text = target.innerText,
+        wpm = 200,
+        words = text.split(/\s+/).filter((word) => word.length > 0),
+        wordCount = words.length,
+        readingTime = Math.ceil(wordCount / wpm);
+
+      el.innerText = readingTime + " min read";
+    });
+  });
 })();
