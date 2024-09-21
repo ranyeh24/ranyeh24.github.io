@@ -189,14 +189,14 @@
     @apply w-full overflow-hidden leading-none;
   }
   .rh-shape-divider-top {
-    @apply translate-y-0.5;
+    @apply translate-y-px;
   }
   .rh-shape-divider-bottom {
-    @apply -translate-y-0.5;
+    @apply -translate-y-px;
   }
   .rh-shape-divider-top svg,
   .rh-shape-divider-bottom svg {
-    @apply block h-20 w-full md:h-[120px] xl:h-40;
+    @apply block h-[100px] w-full md:h-[130px] xl:h-40;
   }
 
   .rh-section-title-wrapper {
