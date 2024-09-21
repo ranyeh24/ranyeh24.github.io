@@ -42,9 +42,14 @@ module.exports = {
         ],
       },
       backgroundImage: {
-        // cta: "linear-gradient(315deg, rgba(62, 154, 222, 0.75) 0%, rgba(80, 62, 222, 0.75) 100%), url(../img/call-to-action.jpg)",
-        // newsletter:
-        //   "linear-gradient(315deg, rgba(62, 154, 222, 0.75) 0%, rgba(80, 62, 222, 0.75) 100%), url(../img/newsletter.jpg)",
+        "section-1":
+          "linear-gradient(315deg, rgba(61, 54, 221, 0.75) 0%, rgba(61, 54, 221, 0.75) 100%), url(../img/section-bg-1.svg)",
+        "section-2":
+          "linear-gradient(315deg, rgba(61, 54, 221, 0.75) 0%, rgba(61, 54, 221, 0.75) 100%), url(../img/section-bg-2.svg)",
+        "section-3":
+          "linear-gradient(315deg, rgba(61, 54, 221, 0.75) 0%, rgba(61, 54, 221, 0.75) 100%), url(../img/section-bg-3.svg)",
+        subscribe:
+          "linear-gradient(315deg, rgba(61, 54, 221, 0.70) 0%, rgba(61, 54, 221, 0.70) 100%), url(../img/subscribe-bg.svg)",
         "gradient-0": "linear-gradient(0deg, #3e7fde 0%, #3e48de 100%)",
         "gradient-45": "linear-gradient(45deg, #3e7fde 0%, #3e48de 100%)",
         "gradient-90": "linear-gradient(90deg, #3e7fde 0%, #3e48de 100%)",
