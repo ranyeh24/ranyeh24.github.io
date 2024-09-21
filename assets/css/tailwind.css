@@ -1630,6 +1630,10 @@ p + h1,
   max-height: 720px;
 }
 
+.max-h-\[480px\]{
+  max-height: 480px;
+}
+
 .w-0\.5{
   width: 0.125rem;
 }
