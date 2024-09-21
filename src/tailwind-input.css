@@ -113,7 +113,7 @@
   }
 
   .rh-navbar {
-    @apply fixed left-0 top-0 z-[1020] flex h-20 w-full flex-wrap items-center justify-center border-b border-solid border-transparent bg-primary-light-1 transition-[height] duration-300 lg:h-[120px] dark:bg-primary-dark-1;
+    @apply fixed left-0 top-0 z-[1020] flex h-20 w-full flex-wrap items-center justify-center border-b border-solid border-transparent bg-transparent transition-[height] duration-300 lg:h-[120px];
   }
   .rh-navbar-wrapper {
     @apply relative flex h-full flex-wrap items-center justify-between;
@@ -266,7 +266,7 @@
 }
 
 .rh-navbar.isSticky {
-  @apply h-20 border-body-light-a3 bg-opacity-75 shadow-navbar backdrop-blur dark:border-body-dark-a3 dark:bg-opacity-75;
+  @apply h-20 border-body-light-a3 bg-primary-light-1 bg-opacity-75 shadow-navbar backdrop-blur-md dark:border-body-dark-a3 dark:bg-primary-dark-1 dark:bg-opacity-75;
 }
 .rh-navbar.menuShow {
   @apply bg-opacity-100 backdrop-blur-0 dark:bg-opacity-100;
