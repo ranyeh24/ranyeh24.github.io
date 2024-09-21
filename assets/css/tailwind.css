@@ -1640,6 +1640,14 @@ p + h1,
   max-height: 600px;
 }
 
+.max-h-\[640px\]{
+  max-height: 640px;
+}
+
+.max-h-\[720px\]{
+  max-height: 720px;
+}
+
 .w-0\.5{
   width: 0.125rem;
 }
