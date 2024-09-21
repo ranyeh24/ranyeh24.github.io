@@ -121,4 +121,17 @@
       el.innerText = readingTime + " min read";
     });
   });
+
+  // Init typed.js
+  setTimeout(() => {
+    var typedEl = new Typed(".typed-el", {
+      strings: ["Randy Hasibuan", "Web Developer", "Web Designer", "Gamer"],
+      typeSpeed: 80,
+      smartBackspace: false,
+      backSpeed: 40,
+      startDelay: 0,
+      backDelay: 1000,
+      loop: true,
+    });
+  }, 1000);
 })();
