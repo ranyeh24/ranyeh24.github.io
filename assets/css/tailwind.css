@@ -772,8 +772,7 @@ p + h1,
   border-bottom-width: 1px;
   border-style: solid;
   border-color: transparent;
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 253 255 / var(--tw-bg-opacity));
+  background-color: transparent;
   transition-property: height;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -783,11 +782,6 @@ p + h1,
   .rh-navbar{
     height: 120px;
   }
-}
-
-.rh-navbar:where([data-theme-mode=dark], [data-theme-mode=dark] *){
-  --tw-bg-opacity: 1;
-  background-color: rgb(13 16 30 / var(--tw-bg-opacity));
 }
 
 .rh-navbar-wrapper{
@@ -1576,10 +1570,6 @@ p + h1,
   margin-top: 3rem;
 }
 
-.mt-20{
-  margin-top: 5rem;
-}
-
 .mt-7{
   margin-top: 1.75rem;
 }
@@ -1634,14 +1624,6 @@ p + h1,
 
 .h-screen{
   height: 100vh;
-}
-
-.max-h-\[600px\]{
-  max-height: 600px;
-}
-
-.max-h-\[640px\]{
-  max-height: 640px;
 }
 
 .max-h-\[720px\]{
@@ -1913,12 +1895,20 @@ p + h1,
   padding-top: 2rem;
 }
 
+.pt-\[176px\]{
+  padding-top: 176px;
+}
+
 .pt-\[18px\]{
   padding-top: 18px;
 }
 
 .pt-\[3px\]{
   padding-top: 3px;
+}
+
+.pt-\[216px\]{
+  padding-top: 216px;
 }
 
 .text-center{
@@ -2130,17 +2120,19 @@ p + h1,
 .rh-navbar.isSticky{
   height: 5rem;
   border-color: #00104010;
+  background-color: rgb(253 253 255 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.75;
   --tw-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.08);
   --tw-shadow-colored: 0px 0px 29px 0px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-backdrop-blur: blur(8px);
+  --tw-backdrop-blur: blur(12px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .rh-navbar.isSticky:where([data-theme-mode=dark], [data-theme-mode=dark] *){
   border-color: #d6e2f916;
+  background-color: rgb(13 16 30 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.75;
 }
 
@@ -2381,6 +2373,10 @@ code{
   .md\:px-\[50px\]{
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  .md\:pt-\[216px\]{
+    padding-top: 216px;
   }
 }
 
