@@ -1272,6 +1272,16 @@ p + h1,
   line-height: 1;
 }
 
+.rh-shape-divider-top{
+  --tw-translate-y: 0.125rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rh-shape-divider-bottom{
+  --tw-translate-y: -0.125rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .rh-shape-divider-top svg,
   .rh-shape-divider-bottom svg{
   display: block;
@@ -1492,6 +1502,10 @@ p + h1,
 
 .-z-\[1\]{
   z-index: -1;
+}
+
+.-order-1{
+  order: -1;
 }
 
 .-mx-4{
@@ -2332,6 +2346,10 @@ pre[class*="language-"]{
 }
 
 @media (min-width: 768px){
+  .md\:order-none{
+    order: 0;
+  }
+
   .md\:w-1\/2{
     width: 50%;
   }
@@ -2346,6 +2364,10 @@ pre[class*="language-"]{
 
   .md\:flex-row{
     flex-direction: row;
+  }
+
+  .md\:gap-16{
+    gap: 4rem;
   }
 
   .md\:px-\[50px\]{
