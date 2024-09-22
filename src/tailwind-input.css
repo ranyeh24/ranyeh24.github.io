@@ -292,3 +292,16 @@ pre[class*="language-"] {
 code {
   @apply !font-code;
 }
+
+.rh-tech-stacks > .rh-tech-stacks-wrapper.animated {
+  animation: tech-stacks 24s linear infinite;
+}
+
+@keyframes tech-stacks {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
