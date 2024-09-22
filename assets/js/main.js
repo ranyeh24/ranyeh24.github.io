@@ -8,7 +8,7 @@
     window.addEventListener("load", function () {
       setTimeout(() => {
         preload.remove();
-      }, 1000);
+      }, 1500);
     });
   }
 
@@ -133,5 +133,5 @@
       backDelay: 1000,
       loop: true,
     });
-  }, 1000);
+  }, 1500);
 })();
