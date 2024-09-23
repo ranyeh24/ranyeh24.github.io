@@ -151,4 +151,109 @@
       }, 50);
     });
   });
+
+  // Add '.anchored-link' class to heading tag inside '[data-web-trigger=article]' element after load
+  const articleContent = document.querySelector("[data-web-trigger=article]");
+
+  if (articleContent) {
+    window.addEventListener("load", function () {
+      const h1s = articleContent.querySelectorAll("h1"),
+        h2s = articleContent.querySelectorAll("h2"),
+        h3s = articleContent.querySelectorAll("h3"),
+        h4s = articleContent.querySelectorAll("h4"),
+        h5s = articleContent.querySelectorAll("h5"),
+        h6s = articleContent.querySelectorAll("h6");
+
+      h1s.forEach((h1) => {
+        h1.classList.add("anchored-link");
+      });
+
+      h2s.forEach((h2) => {
+        h2.classList.add("anchored-link");
+      });
+
+      h3s.forEach((h3) => {
+        h3.classList.add("anchored-link");
+      });
+
+      h4s.forEach((h4) => {
+        h4.classList.add("anchored-link");
+      });
+
+      h5s.forEach((h5) => {
+        h5.classList.add("anchored-link");
+      });
+
+      h6s.forEach((h6) => {
+        h6.classList.add("anchored-link");
+      });
+    });
+  }
+
+  // Section scroll
+  window.addEventListener("load", function () {
+    if (window.location.hash) {
+      const section = document.querySelector(window.location.hash);
+
+      if (section) {
+        const scrollMT = this.getComputedStyle(section).scrollMarginTop;
+        autoScroll(section.offsetTop - parseInt(scrollMT) - 100);
+      }
+    }
+  });
 })();
+
+// Init table of content
+function initTableOfContent(els) {
+  var anchoredElText,
+    anchoredElHref,
+    toc = document.createElement("UL"),
+    tocInit = document.querySelector(".rh-init-content-table");
+
+  tocInit.appendChild(toc);
+
+  for (let i = 0; i < els.length; i++) {
+    anchoredElText = els[i].textContent;
+    anchoredElHref = els[i]
+      .querySelector(".anchorjs-link")
+      .getAttribute("href");
+    addTOCItem(toc, anchoredElHref, anchoredElText, els[i].nodeName);
+  }
+}
+
+function addTOCItem(list, href, text, node) {
+  var listItem = document.createElement("LI"),
+    anchorItem = document.createElement("A"),
+    textNode = document.createTextNode(text);
+
+  anchorItem.href = href;
+  anchorItem.className = "rh-toc-link";
+
+  if (node == "H3") {
+    anchorItem.classList.add("level-2");
+  } else if (node == "H4") {
+    anchorItem.classList.add("level-3");
+  } else if (node == "H5") {
+    anchorItem.classList.add("level-4");
+  } else if (node == "H6") {
+    anchorItem.classList.add("level-5");
+  }
+
+  list.appendChild(listItem);
+  listItem.appendChild(anchorItem);
+  anchorItem.appendChild(textNode);
+
+  anchorItem.addEventListener("click", function (e) {
+    const target = document.querySelector(href);
+    autoScroll(target.offsetTop - 100);
+  });
+}
+
+function autoScroll(offsetTop) {
+  setTimeout(() => {
+    window.scrollTo({
+      top: offsetTop,
+      behavior: "smooth",
+    });
+  }, 500);
+}
