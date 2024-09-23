@@ -2079,6 +2079,10 @@ textarea.rh-form-control{
   border-style: solid;
 }
 
+.border-body-light-a3{
+  border-color: #00104010;
+}
+
 .border-body-light-a6{
   border-color: #00073527;
 }
@@ -2090,10 +2094,6 @@ textarea.rh-form-control{
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-body-light-a3{
-  border-color: #00104010;
 }
 
 .bg-behance{
@@ -2275,6 +2275,11 @@ textarea.rh-form-control{
   padding-bottom: 0.75rem;
 }
 
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-7{
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
@@ -2288,16 +2293,6 @@ textarea.rh-form-control{
 .py-\[50px\]{
   padding-top: 50px;
   padding-bottom: 50px;
-}
-
-.py-5{
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .pb-8{
@@ -2318,6 +2313,10 @@ textarea.rh-form-control{
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pt-\[136px\]{
+  padding-top: 136px;
 }
 
 .pt-\[176px\]{
@@ -2878,6 +2877,14 @@ code{
     height: 567px;
   }
 
+  .md\:max-h-\[720px\]{
+    max-height: 720px;
+  }
+
+  .md\:max-h-\[768px\]{
+    max-height: 768px;
+  }
+
   .md\:w-1\/2{
     width: 50%;
   }
@@ -2935,12 +2942,12 @@ code{
   }
 }
 
-.dark\:border-body-dark-a6:where([data-theme-mode=dark], [data-theme-mode=dark] *){
-  border-color: #d9defc33;
-}
-
 .dark\:border-body-dark-a3:where([data-theme-mode=dark], [data-theme-mode=dark] *){
   border-color: #d6e2f916;
+}
+
+.dark\:border-body-dark-a6:where([data-theme-mode=dark], [data-theme-mode=dark] *){
+  border-color: #d9defc33;
 }
 
 .dark\:bg-body-dark-a3:where([data-theme-mode=dark], [data-theme-mode=dark] *){
