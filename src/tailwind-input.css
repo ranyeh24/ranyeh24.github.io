@@ -156,8 +156,68 @@
     @apply border-white bg-transparent text-white hover:bg-white hover:text-black focus:bg-white focus:text-black dark:hover:bg-white dark:hover:text-black dark:focus:bg-white dark:focus:text-black;
   }
 
+  .rh-form-label {
+    @apply mb-2 block;
+  }
+  .rh-form-text {
+    @apply mt-1 text-sm/normal text-body-light-10 dark:text-body-dark-10;
+  }
   .rh-form-control {
-    @apply block w-full appearance-none rounded-lg border border-solid border-body-light-a6 bg-body-light-2 bg-clip-padding px-5 py-2.5 text-base font-normal text-body-light-11 outline-none focus:border-primary dark:border-body-dark-a6 dark:bg-body-dark-1 dark:text-body-dark-11;
+    @apply block w-full appearance-none rounded-xl border border-solid border-body-light-a6 bg-primary-light-2 bg-clip-padding px-5 py-2.5 text-base font-normal text-body-light-11 outline-none focus:border-primary dark:border-body-dark-a6 dark:bg-primary-dark-1 dark:text-body-dark-11;
+  }
+  textarea.rh-form-control {
+    @apply resize-none;
+  }
+  .rh-form-check {
+    @apply mb-0.5 block min-h-6 pl-[1.75em];
+  }
+  .rh-form-check .rh-form-check-input {
+    @apply float-left -ml-[1.75em];
+  }
+  .rh-form-check-reverse {
+    @apply pl-0 pr-[1.75em] text-right;
+  }
+  .rh-form-check-reverse .rh-form-check-input {
+    @apply float-right -mr-[1.75em] ml-0;
+  }
+  .rh-form-check-inline {
+    @apply mr-4 inline-block;
+  }
+  .rh-form-check-input {
+    @apply bg-form-check-input mt-1 h-[1em] w-[1em] cursor-pointer appearance-none border border-solid border-body-light-a6 bg-primary-light-2 bg-contain bg-center bg-no-repeat align-top dark:border-body-dark-a6 dark:bg-primary-dark-1;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .rh-form-check-input[type="checkbox"] {
+    @apply rounded-[0.25em];
+  }
+  .rh-form-check-input[type="radio"] {
+    @apply rounded-full;
+  }
+  .rh-form-check-input:active {
+    @apply brightness-90;
+  }
+  .rh-form-check-input:focus {
+    @apply border-primary-light-8 outline-none dark:border-primary-dark-8;
+  }
+  .rh-form-check-input:checked {
+    @apply border-primary bg-primary;
+  }
+  .rh-form-check-input[type="checkbox"]:checked {
+    --rh-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+  }
+  .rh-form-check-input[type="radio"]:checked {
+    --rh-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  }
+  .rh-form-check-input[type="checkbox"]:indeterminate,
+  .rh-form-check-input[type="checkbox"][indeterminate] {
+    @apply border-primary bg-primary;
+  }
+  .rh-form-check-input:disabled {
+    @apply pointer-events-none opacity-50 filter-none;
+  }
+  .rh-form-check-label {
+    @apply cursor-pointer select-none text-base text-body-light-11 dark:text-body-dark-11;
   }
 
   .rh-section {
