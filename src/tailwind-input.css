@@ -88,11 +88,11 @@
   h4 + p,
   h5 + p,
   h6 + p {
-    @apply mt-6;
+    @apply mt-5;
   }
 
   p {
-    @apply m-0 text-base text-inherit;
+    @apply m-0 text-[1em] text-inherit;
   }
   p + p {
     @apply mt-5;
@@ -103,7 +103,7 @@
   p + h4,
   p + h5,
   p + h6 {
-    @apply mt-8;
+    @apply mt-10;
   }
 }
 
@@ -184,7 +184,7 @@
     @apply mr-4 inline-block;
   }
   .rh-form-check-input {
-    @apply bg-form-check-input mt-1 h-[1em] w-[1em] cursor-pointer appearance-none border border-solid border-body-light-a6 bg-primary-light-2 bg-contain bg-center bg-no-repeat align-top dark:border-body-dark-a6 dark:bg-primary-dark-1;
+    @apply mt-1 h-[1em] w-[1em] cursor-pointer appearance-none border border-solid border-body-light-a6 bg-primary-light-2 bg-form-check-input bg-contain bg-center bg-no-repeat align-top dark:border-body-dark-a6 dark:bg-primary-dark-1;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -302,6 +302,27 @@
   .rh-pagination-link {
     @apply inline-flex h-[42px] w-[42px] items-center justify-center rounded-full text-base text-body-light-11 hover:text-body-light-12 focus:bg-primary focus:text-white sm:h-[46px] sm:w-[46px] dark:text-body-dark-11 dark:hover:text-body-dark-12;
   }
+
+  [data-web-trigger="article"] h1,
+  [data-web-trigger="article"] h2,
+  [data-web-trigger="article"] h3,
+  [data-web-trigger="article"] h4,
+  [data-web-trigger="article"] h5,
+  [data-web-trigger="article"] h6 {
+    @apply font-body font-semibold tracking-tight;
+  }
+  [data-web-trigger="article"] ol {
+    @apply my-5 list-decimal pl-8;
+  }
+  [data-web-trigger="article"] ol li {
+    @apply ps-[.4em];
+  }
+  [data-web-trigger="article"] ul {
+    @apply my-5 list-disc pl-8;
+  }
+  [data-web-trigger="article"] ul li {
+    @apply ps-[.4em];
+  }
 }
 
 @layer utilities {
@@ -372,4 +393,27 @@ code {
 
 .rh-pagination-link.isActive {
   @apply bg-primary text-white;
+}
+
+.rh-toc-link {
+  @apply block text-wrap py-[3px] text-sm text-body-light-11 hover:text-body-light-12 dark:text-body-dark-11 dark:hover:text-body-dark-12;
+}
+.rh-toc-link.level-2 {
+  @apply pl-4;
+}
+.rh-toc-link.level-3 {
+  @apply pl-8;
+}
+.rh-toc-link.level-4 {
+  @apply pl-12;
+}
+.rh-toc-link.level-5 {
+  @apply pl-16;
+}
+
+.anchorjs-link {
+  @apply ml-0 leading-[inherit] text-body-light-a10 dark:text-body-dark-a10;
+}
+.anchorjs-link:hover {
+  @apply text-primary;
 }
