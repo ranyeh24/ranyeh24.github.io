@@ -66,6 +66,7 @@ module.exports = {
         "github-light": "#fafbfc",
         behance: "#053eff",
         dribbble: "#ea4c89",
+        whatsapp: '#25d366',
         primary: {
           DEFAULT: "#3d36dd",
           light: {
