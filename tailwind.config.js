@@ -54,6 +54,7 @@ module.exports = {
         "gradient-45": "linear-gradient(45deg, #3e7fde 0%, #3e48de 100%)",
         "gradient-90": "linear-gradient(90deg, #3e7fde 0%, #3e48de 100%)",
         "gradient-180": "linear-gradient(180deg, #3e7fde 0%, #3e48de 100%)",
+        "form-check-input": "var(--rh-form-check-bg-image)",
       },
       colors: {
         facebook: "#1877f2",
