@@ -1597,6 +1597,48 @@ textarea.rh-form-control{
   transition-duration: 150ms;
 }
 
+.rh-pagination-link{
+  display: inline-flex;
+  height: 42px;
+  width: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(98 99 108 / var(--tw-text-opacity));
+}
+
+.rh-pagination-link:hover{
+  --tw-text-opacity: 1;
+  color: rgb(30 31 36 / var(--tw-text-opacity));
+}
+
+.rh-pagination-link:focus{
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 54 221 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px){
+  .rh-pagination-link{
+    height: 46px;
+    width: 46px;
+  }
+}
+
+.rh-pagination-link:where([data-theme-mode=dark], [data-theme-mode=dark] *){
+  --tw-text-opacity: 1;
+  color: rgb(178 179 189 / var(--tw-text-opacity));
+}
+
+.rh-pagination-link:hover:where([data-theme-mode=dark], [data-theme-mode=dark] *){
+  --tw-text-opacity: 1;
+  color: rgb(238 238 240 / var(--tw-text-opacity));
+}
+
 .invisible{
   visibility: hidden;
 }
@@ -1615,6 +1657,10 @@ textarea.rh-form-control{
 
 .left-0{
   left: 0px;
+}
+
+.left-2{
+  left: 0.5rem;
 }
 
 .right-0{
@@ -1670,10 +1716,6 @@ textarea.rh-form-control{
   margin-top: -2rem;
 }
 
-.mb-1\.5{
-  margin-bottom: 0.375rem;
-}
-
 .mb-10{
   margin-bottom: 2.5rem;
 }
@@ -1684,6 +1726,10 @@ textarea.rh-form-control{
 
 .mb-2{
   margin-bottom: 0.5rem;
+}
+
+.mb-3{
+  margin-bottom: 0.75rem;
 }
 
 .mb-4{
@@ -1746,16 +1792,16 @@ textarea.rh-form-control{
   margin-top: 0.5rem;
 }
 
-.mt-7{
-  margin-top: 1.75rem;
-}
-
 .mt-5{
   margin-top: 1.25rem;
 }
 
 .mt-6{
   margin-top: 1.5rem;
+}
+
+.mt-7{
+  margin-top: 1.75rem;
 }
 
 .inline-block{
@@ -1822,6 +1868,10 @@ textarea.rh-form-control{
   height: 46px;
 }
 
+.h-\[480px\]{
+  height: 480px;
+}
+
 .h-\[50px\]{
   height: 50px;
 }
@@ -1834,28 +1884,12 @@ textarea.rh-form-control{
   height: 100vh;
 }
 
-.h-\[500px\]{
-  height: 500px;
-}
-
-.h-\[480px\]{
-  height: 480px;
-}
-
 .max-h-\[480px\]{
   max-height: 480px;
 }
 
 .max-h-\[720px\]{
   max-height: 720px;
-}
-
-.max-h-\[700px\]{
-  max-height: 700px;
-}
-
-.min-h-\[400px\]{
-  min-height: 400px;
 }
 
 .w-0\.5{
@@ -1966,6 +2000,10 @@ textarea.rh-form-control{
   justify-content: center;
 }
 
+.justify-between{
+  justify-content: space-between;
+}
+
 .gap-1{
   gap: 0.25rem;
 }
@@ -2024,12 +2062,17 @@ textarea.rh-form-control{
   border-width: 1px;
 }
 
+.border-0{
+  border-width: 0px;
+}
+
 .border-2{
   border-width: 2px;
 }
 
-.border-0{
-  border-width: 0px;
+.border-y{
+  border-top-width: 1px;
+  border-bottom-width: 1px;
 }
 
 .border-solid{
@@ -2049,9 +2092,21 @@ textarea.rh-form-control{
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-body-light-a3{
+  border-color: #00104010;
+}
+
 .bg-behance{
   --tw-bg-opacity: 1;
   background-color: rgb(5 62 255 / var(--tw-bg-opacity));
+}
+
+.bg-blue-500\/15{
+  background-color: rgb(59 130 246 / 0.15);
+}
+
+.bg-body-light-a3{
+  background-color: #00104010;
 }
 
 .bg-current{
@@ -2066,6 +2121,10 @@ textarea.rh-form-control{
 .bg-github{
   --tw-bg-opacity: 1;
   background-color: rgb(36 41 46 / var(--tw-bg-opacity));
+}
+
+.bg-green-500\/15{
+  background-color: rgb(34 197 94 / 0.15);
 }
 
 .bg-linkedin{
@@ -2090,6 +2149,10 @@ textarea.rh-form-control{
 
 .bg-primary\/75{
   background-color: rgb(61 54 221 / 0.75);
+}
+
+.bg-purple-500\/15{
+  background-color: rgb(168 85 247 / 0.15);
 }
 
 .bg-white{
@@ -2172,6 +2235,11 @@ textarea.rh-form-control{
   padding-right: 0.5rem;
 }
 
+.px-2\.5{
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -2192,6 +2260,11 @@ textarea.rh-form-control{
   padding-right: 1.5rem;
 }
 
+.py-0\.5{
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+}
+
 .py-14{
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
@@ -2200,6 +2273,11 @@ textarea.rh-form-control{
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-7{
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 
 .py-8{
@@ -2212,13 +2290,22 @@ textarea.rh-form-control{
   padding-bottom: 50px;
 }
 
-.py-7{
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pb-8{
   padding-bottom: 2rem;
+}
+
+.pl-\[54px\]{
+  padding-left: 54px;
 }
 
 .pt-1{
@@ -2257,6 +2344,10 @@ textarea.rh-form-control{
   vertical-align: middle;
 }
 
+.font-body{
+  font-family: Inter Tight, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
 .text-2xl\/none{
   font-size: 1.5rem;
   line-height: 1;
@@ -2265,6 +2356,11 @@ textarea.rh-form-control{
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-6xl{
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .text-\[22px\]{
@@ -2311,9 +2407,9 @@ textarea.rh-form-control{
   line-height: 1;
 }
 
-.text-6xl{
-  font-size: 3.75rem;
-  line-height: 1;
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold{
@@ -2332,6 +2428,10 @@ textarea.rh-form-control{
   font-weight: 600;
 }
 
+.lowercase{
+  text-transform: lowercase;
+}
+
 .leading-none{
   line-height: 1;
 }
@@ -2339,6 +2439,11 @@ textarea.rh-form-control{
 .text-blue-500{
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.text-body-light-11{
+  --tw-text-opacity: 1;
+  color: rgb(98 99 108 / var(--tw-text-opacity));
 }
 
 .text-green-500{
@@ -2490,7 +2595,7 @@ textarea.rh-form-control{
   height: 5rem;
   border-color: #00104010;
   background-color: rgb(253 253 255 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.75;
+  --tw-bg-opacity: 0.8;
   --tw-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.08);
   --tw-shadow-colored: 0px 0px 29px 0px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -2502,7 +2607,7 @@ textarea.rh-form-control{
 .rh-navbar.isSticky:where([data-theme-mode=dark], [data-theme-mode=dark] *){
   border-color: #d6e2f916;
   background-color: rgb(13 16 30 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.75;
+  --tw-bg-opacity: 0.8;
 }
 
 .rh-navbar.menuShow{
@@ -2565,6 +2670,13 @@ code{
   to {
     transform: translateX(-100%);
   }
+}
+
+.rh-pagination-link.isActive{
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 54 221 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .before\:absolute::before{
@@ -2649,10 +2761,6 @@ code{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.hover\:underline:hover{
-  text-decoration-line: underline;
-}
-
 .focus\:border-transparent:focus{
   border-color: transparent;
 }
@@ -2722,12 +2830,12 @@ code{
     width: 75%;
   }
 
-  .sm\:w-auto{
-    width: auto;
-  }
-
   .sm\:w-7\/12{
     width: 58.333333%;
+  }
+
+  .sm\:w-auto{
+    width: auto;
   }
 
   .sm\:max-w-md{
@@ -2740,6 +2848,10 @@ code{
 
   .sm\:flex-row{
     flex-direction: row;
+  }
+
+  .sm\:gap-2{
+    gap: 0.5rem;
   }
 
   .sm\:px-6{
@@ -2756,6 +2868,10 @@ code{
 @media (min-width: 768px){
   .md\:order-none{
     order: 0;
+  }
+
+  .md\:mb-12{
+    margin-bottom: 3rem;
   }
 
   .md\:h-\[567px\]{
@@ -2786,14 +2902,14 @@ code{
     row-gap: 3rem;
   }
 
-  .md\:px-\[50px\]{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
   .md\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:px-\[50px\]{
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .md\:pt-\[216px\]{
@@ -2821,6 +2937,14 @@ code{
 
 .dark\:border-body-dark-a6:where([data-theme-mode=dark], [data-theme-mode=dark] *){
   border-color: #d9defc33;
+}
+
+.dark\:border-body-dark-a3:where([data-theme-mode=dark], [data-theme-mode=dark] *){
+  border-color: #d6e2f916;
+}
+
+.dark\:bg-body-dark-a3:where([data-theme-mode=dark], [data-theme-mode=dark] *){
+  background-color: #d6e2f916;
 }
 
 .dark\:bg-github-light:where([data-theme-mode=dark], [data-theme-mode=dark] *){
@@ -2866,6 +2990,11 @@ code{
 .dark\:text-black:where([data-theme-mode=dark], [data-theme-mode=dark] *){
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.dark\:text-body-dark-11:where([data-theme-mode=dark], [data-theme-mode=dark] *){
+  --tw-text-opacity: 1;
+  color: rgb(178 179 189 / var(--tw-text-opacity));
 }
 
 .dark\:hover\:text-blue-500:hover:where([data-theme-mode=dark], [data-theme-mode=dark] *){
