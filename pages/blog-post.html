@@ -368,6 +368,19 @@
               perferendis rerum vitae magni corrupti deserunt libero assumenda
               labore expedita. Rem!
             </p>
+            <pre><code class="language-html">&lt;div&gt; class="mx-auto mb-4 max-w-3xl"&gt;
+  &lt;a
+    href="./category.html"
+    class="inline-block rounded-full bg-purple-500/15 px-4 py-1 font-medium text-purple-500 hover:text-purple-500 dark:hover:text-purple-500"
+    &gt;Documentation&lt;/a
+  &gt;
+&lt;/div&gt;
+&lt;h1
+  class="mx-auto mb-6 max-w-3xl text-wrap font-body text-4xl font-bold leading-tight tracking-tight md:text-5xl"
+&gt;
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit! Fuga,
+  voluptates
+&lt;/h1&gt;</code></pre>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
               dicta earum fuga veritatis rem eius molestiae repudiandae
@@ -384,19 +397,30 @@
               amet. Officiis reprehenderit nam ratione dolore? Quidem aperiam
               reprehenderit aliquam qui amet sequi nulla!
             </p>
-            <pre><code class="language-javascript">function initSwiper() {
-  document.querySelectorAll(".init-swiper").forEach((slider) =&gt; {
-    let config = JSON.parse(
-      slider.querySelector(".swiper-config").innerHTML.trim(),
-    );
+            <pre><code class="language-javascript">window.addEventListener("load", function () {
+  if (window.location.hash) {
+    const section = document.querySelector(window.location.hash);
 
-    if (slider.classList.contains("swiper-tab")) {
-      initSwiperWithCustomPagination(slider, config);
-    } else {
-      new Swiper(slider, config);
+    if (section) {
+      const scrollMT = this.getComputedStyle(section).scrollMarginTop;
+      autoScroll(section.offsetTop - parseInt(scrollMT) - 100);
     }
-  });
-}</code></pre>
+  }
+});
+
+window.addEventListener("load", function () {
+  setTimeout(() =&gt; {
+    const anchorLinks = document.querySelectorAll(".anchorjs-link");
+
+    anchorLinks.forEach((link) =&gt; {
+      link.addEventListener("click", function (e) {
+        const href = link.getAttribute("href"),
+          target = document.querySelector(href);
+        autoScroll(target.offsetTop - 100);
+      });
+    });
+  }, 50);
+});</code></pre>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
               officia fuga amet modi inventore doloribus impedit. Sed, nisi, rem
@@ -408,6 +432,23 @@
               Inventore! Architecto illo, labore dolor sapiente consectetur
               aliquid explicabo. Nulla dolorem repudiandae corporis.
             </p>
+            <ul>
+              <li><p>Quam orci nostra mi nulla, hac a.</p></li>
+              <li>
+                <p>
+                  Interdum iaculis quis tellus sociis orci nulla, quam rutrum
+                  conubia tortor primis.
+                </p>
+              </li>
+              <li>
+                <p>Non felis sem placerat aenean duis, ornare turpis nostra.</p>
+              </li>
+              <li>
+                <p>
+                  Habitasse duis sociis sagittis cursus, ante dictumst commodo.
+                </p>
+              </li>
+            </ul>
             <p>
               Optio facilis sapiente veniam quia aspernatur! Perferendis
               repellat iste corporis excepturi voluptates asperiores eius
@@ -420,20 +461,102 @@
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
               illum praesentium alias eius perferendis, quod voluptates in
-              fugiat reprehenderit rem sint culpa. Eum alias laborum pariatur
-              nesciunt laboriosam, molestiae omnis consectetur, earum obcaecati
-              animi explicabo? Ut sunt velit voluptatem dolorum?
+              fugiat reprehenderit rem sint culpa.
+            </p>
+            <ol>
+              <li>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </li>
+              <li>
+                <p>
+                  Maxime, dolor voluptas iusto similique quia, fugit libero
+                  debitis eos aperiam, iure voluptatibus!
+                </p>
+              </li>
+              <li>
+                <p>
+                  Error, molestiae sed. Voluptates ut architecto totam repellat
+                  quia.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Quasi sunt quidem porro officiis voluptatem excepturi soluta
+                  suscipit vitae minus pariatur, consectetur illo consequatur
+                  aperiam, molestias nulla a obcaecati voluptates corrupti.
+                </p>
+              </li>
+            </ol>
+            <p>
+              Eum alias laborum pariatur nesciunt laboriosam, molestiae omnis
+              consectetur, earum obcaecati animi explicabo? Ut sunt velit
+              voluptatem dolorum?
             </p>
             <h4>Lorem ipsum dolor sit.</h4>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis incidunt possimus repellat eos neque exercitationem
-              illum totam aliquam quas! Sequi minus ea, itaque optio voluptas
-              voluptatum reiciendis iste facilis sit. Ut, id praesentium magnam
-              eum consectetur mollitia tempore esse recusandae deserunt possimus
-              atque consequatur ad dolor sequi repellendus molestiae odio velit
-              aperiam. Magni doloremque provident nesciunt dolores ut placeat
-              qui.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              exercitationem aut voluptatem maiores tempora porro eveniet, vel
+              quibusdam eos? Ratione blanditiis pariatur, rerum modi libero
+              optio amet. Odit, eum similique. Inventore iste consequatur
+              tenetur laboriosam corrupti reiciendis odit dignissimos dolorem
+              ullam neque fugiat aspernatur odio natus officia sit dolor modi
+              laudantium, corporis recusandae aliquid quod perspiciatis eaque!
+            </p>
+            <figure>
+              <img src="../assets/img/cover.png" alt="article image" />
+              <figcaption>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et,
+                accusamus.
+              </figcaption>
+            </figure>
+            <p>
+              Ex, tempora dolore? Voluptatum saepe, dolores quam odit culpa ad
+              similique mollitia sapiente minus quaerat corrupti porro iure
+              repellendus animi, alias assumenda officiis expedita perspiciatis
+              voluptas, eligendi fuga perferendis adipisci aliquam. Commodi,
+              vitae. Commodi esse vel maiores recusandae similique officiis
+              rerum, alias, quod consequuntur voluptatibus nam error. Molestiae
+              ab, rerum quo eum, accusantium magnam nulla reiciendis
+              voluptatibus iusto ipsam quia minus debitis nesciunt! Iste impedit
+              harum architecto nostrum incidunt nobis id voluptatum, dicta
+              maxime velit, laudantium quia error? Non impedit sed esse dolorum
+              dolorem aspernatur cumque molestiae, ab expedita.
+            </p>
+            <pre><code class="language-css">ul{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  list-style-type: disc;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-left: 2rem;
+}
+
+ul li{
+  padding-inline-start: .5em;
+}</code></pre>
+            <p>
+              Corporis reiciendis sed obcaecati! Dolore quae libero nihil
+              aspernatur? Laborum vero sit similique dolorem, iure labore
+              asperiores pariatur beatae quisquam reprehenderit deleniti fugit
+              ipsum, voluptates voluptas hic dignissimos delectus eveniet,
+              accusamus in esse sequi. Maxime similique dolorum voluptatum,
+              ipsum deleniti ea. Animi nihil magnam sunt doloribus placeat,
+              porro suscipit vitae, dolorum enim, nemo aspernatur delectus
+              reprehenderit natus vel amet voluptas quam ratione harum
+              recusandae. Deserunt, quas odit iusto cum libero hic expedita
+              similique, blanditiis non vero, sunt quae accusantium tempore.
+              Doloremque minima animi quia asperiores ullam eius optio! Delectus
+              quisquam saepe odio dolorum. Libero.
+            </p>
+            <p>
+              Tempore cum laborum nesciunt, quidem accusantium enim adipisci,
+              voluptas ad magnam tempora atque corporis. Ratione quidem labore,
+              vel ipsum vero reprehenderit unde dolorum nesciunt nobis deserunt
+              cumque, rem at maiores. Error commodi illo sunt. Animi sequi rem
+              incidunt explicabo eos necessitatibus, dolorum dolore, doloremque
+              laboriosam expedita tempore voluptates quia quam reprehenderit
+              molestias deserunt ipsam repudiandae quis. A, unde hic? Explicabo!
             </p>
             <h3>Libero iure soluta</h3>
             <p>
