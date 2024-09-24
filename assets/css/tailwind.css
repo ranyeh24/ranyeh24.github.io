@@ -563,15 +563,8 @@ video {
 }
 
 ::-webkit-scrollbar{
-  height: 0.375rem;
-  width: 0.375rem;
-}
-
-@media (min-width: 768px){
-  ::-webkit-scrollbar{
-    height: 0.5rem;
-    width: 0.5rem;
-  }
+  height: 0.25rem;
+  width: 0.25rem;
 }
 
 ::-webkit-scrollbar-track{
@@ -581,12 +574,12 @@ video {
 ::-webkit-scrollbar-thumb{
   border-radius: 9999px;
   --tw-bg-opacity: 1;
-  background-color: rgb(185 187 198 / var(--tw-bg-opacity));
+  background-color: rgb(139 141 152 / var(--tw-bg-opacity));
 }
 
 :where([data-theme-mode=dark], [data-theme-mode=dark] *)::-webkit-scrollbar-thumb{
   --tw-bg-opacity: 1;
-  background-color: rgb(95 96 106 / var(--tw-bg-opacity));
+  background-color: rgb(108 110 121 / var(--tw-bg-opacity));
 }
 
 ::-webkit-scrollbar-corner{
