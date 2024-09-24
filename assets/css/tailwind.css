@@ -1728,6 +1728,18 @@ textarea.rh-form-control{
   color: rgb(121 123 134 / var(--tw-text-opacity));
 }
 
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .invisible{
   visibility: hidden;
 }
@@ -2031,6 +2043,14 @@ textarea.rh-form-control{
 
 .max-w-full{
   max-width: 100%;
+}
+
+.max-w-md{
+  max-width: 28rem;
+}
+
+.flex-1{
+  flex: 1 1 0%;
 }
 
 .flex-shrink-0{
@@ -2452,6 +2472,14 @@ textarea.rh-form-control{
   padding-top: 3px;
 }
 
+.pt-\[168px\]{
+  padding-top: 168px;
+}
+
+.pb-\[88px\]{
+  padding-bottom: 88px;
+}
+
 .text-left{
   text-align: left;
 }
@@ -2532,6 +2560,16 @@ textarea.rh-form-control{
   line-height: 1rem;
 }
 
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-8xl{
+  font-size: 6rem;
+  line-height: 1;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -2546,6 +2584,10 @@ textarea.rh-form-control{
 
 .font-semibold{
   font-weight: 600;
+}
+
+.font-extrabold{
+  font-weight: 800;
 }
 
 .lowercase{
@@ -3118,6 +3160,14 @@ code{
     padding-top: 216px;
   }
 
+  .md\:pt-\[248px\]{
+    padding-top: 248px;
+  }
+
+  .md\:pb-32{
+    padding-bottom: 8rem;
+  }
+
   .md\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -3131,6 +3181,16 @@ code{
   .md\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:text-9xl{
+    font-size: 8rem;
+    line-height: 1;
   }
 }
 
@@ -3153,6 +3213,12 @@ code{
 
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px){
+  .xl\:text-\[160px\]{
+    font-size: 160px;
   }
 }
 
