@@ -580,11 +580,13 @@ video {
 
 ::-webkit-scrollbar-thumb{
   border-radius: 9999px;
-  background-color: #00083046;
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 187 198 / var(--tw-bg-opacity));
 }
 
 :where([data-theme-mode=dark], [data-theme-mode=dark] *)::-webkit-scrollbar-thumb{
-  background-color: #e0e3fd60;
+  --tw-bg-opacity: 1;
+  background-color: rgb(95 96 106 / var(--tw-bg-opacity));
 }
 
 ::-webkit-scrollbar-corner{
