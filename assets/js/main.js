@@ -201,6 +201,21 @@
       }
     }
   });
+
+  // Auto scroll when anchorjs link is clicked
+  window.addEventListener("load", function () {
+    setTimeout(() => {
+      const anchorLinks = document.querySelectorAll(".anchorjs-link");
+
+      anchorLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          const href = link.getAttribute("href"),
+            target = document.querySelector(href);
+          autoScroll(target.offsetTop - 100);
+        });
+      });
+    }, 50);
+  });
 })();
 
 // Init table of content
