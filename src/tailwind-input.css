@@ -10,13 +10,13 @@
 
 @layer base {
   ::-webkit-scrollbar {
-    @apply h-1.5 w-1.5 md:h-2 md:w-2;
+    @apply h-1 w-1;
   }
   ::-webkit-scrollbar-track {
     @apply bg-transparent;
   }
   ::-webkit-scrollbar-thumb {
-    @apply rounded-full bg-body-light-8 dark:bg-body-dark-8;
+    @apply rounded-full bg-body-light-9 dark:bg-body-dark-9;
   }
   ::-webkit-scrollbar-corner {
     @apply bg-transparent;
