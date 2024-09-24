@@ -16,7 +16,7 @@
     @apply bg-transparent;
   }
   ::-webkit-scrollbar-thumb {
-    @apply rounded-full bg-body-light-a8 dark:bg-body-dark-a8;
+    @apply rounded-full bg-body-light-8 dark:bg-body-dark-8;
   }
   ::-webkit-scrollbar-corner {
     @apply bg-transparent;
