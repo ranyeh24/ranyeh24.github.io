@@ -2045,14 +2045,6 @@ textarea.rh-form-control{
   max-width: 100%;
 }
 
-.max-w-md{
-  max-width: 28rem;
-}
-
-.flex-1{
-  flex: 1 1 0%;
-}
-
 .flex-shrink-0{
   flex-shrink: 0;
 }
@@ -2444,6 +2436,10 @@ textarea.rh-form-control{
   padding-bottom: 2rem;
 }
 
+.pb-\[88px\]{
+  padding-bottom: 88px;
+}
+
 .pl-\[54px\]{
   padding-left: 54px;
 }
@@ -2464,20 +2460,16 @@ textarea.rh-form-control{
   padding-top: 136px;
 }
 
+.pt-\[168px\]{
+  padding-top: 168px;
+}
+
 .pt-\[18px\]{
   padding-top: 18px;
 }
 
 .pt-\[3px\]{
   padding-top: 3px;
-}
-
-.pt-\[168px\]{
-  padding-top: 168px;
-}
-
-.pb-\[88px\]{
-  padding-bottom: 88px;
 }
 
 .text-left{
@@ -2496,6 +2488,11 @@ textarea.rh-form-control{
   font-family: Inter Tight, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-2xl\/none{
   font-size: 1.5rem;
   line-height: 1;
@@ -2508,6 +2505,11 @@ textarea.rh-form-control{
 
 .text-6xl{
   font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-8xl{
+  font-size: 6rem;
   line-height: 1;
 }
 
@@ -2560,18 +2562,12 @@ textarea.rh-form-control{
   line-height: 1rem;
 }
 
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-8xl{
-  font-size: 6rem;
-  line-height: 1;
-}
-
 .font-bold{
   font-weight: 700;
+}
+
+.font-extrabold{
+  font-weight: 800;
 }
 
 .font-medium{
@@ -2584,10 +2580,6 @@ textarea.rh-form-control{
 
 .font-semibold{
   font-weight: 600;
-}
-
-.font-extrabold{
-  font-weight: 800;
 }
 
 .lowercase{
@@ -3152,6 +3144,10 @@ code{
     padding-bottom: 50px;
   }
 
+  .md\:pb-32{
+    padding-bottom: 8rem;
+  }
+
   .md\:pt-\[176px\]{
     padding-top: 176px;
   }
@@ -3164,8 +3160,9 @@ code{
     padding-top: 248px;
   }
 
-  .md\:pb-32{
-    padding-bottom: 8rem;
+  .md\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .md\:text-4xl{
@@ -3178,19 +3175,14 @@ code{
     line-height: 1;
   }
 
-  .md\:text-lg{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
-  .md\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   .md\:text-9xl{
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
