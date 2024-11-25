@@ -6,7 +6,7 @@ My design of personal portfolio website. This is just a website template, not th
 
 ## Preview
 
-[!Preview image](./assets/img/portfolio/ranyeh-portfolio.png)
+![Preview image](./assets/img/portfolio/ranyeh-portfolio.png)
 
 ## Technologies Used
 
