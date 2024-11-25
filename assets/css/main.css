@@ -2736,8 +2736,8 @@ textarea.rh-form-control{
 }
 
 .rh-step-list-item-icon-line{
-  height: 100%;
   width: 1px;
+  flex: 1 1 0%;
   background-color: #00073527;
 }
 
@@ -3301,9 +3301,7 @@ textarea.rh-form-control{
 
 .rh-codeblock-wrapper pre[class*="language-"]{
   margin: 0px;
-  overflow: auto;
   background-color: inherit;
-  padding: 1.25rem;
 }
 
 .rh-codeblock-wrapper pre[class*="language-"]:focus-visible{
@@ -3313,9 +3311,8 @@ textarea.rh-form-control{
 }
 
 .rh-codeblock-wrapper code[class*="language-"]{
-  overflow: visible;
   background-color: transparent !important;
-  padding: 0px !important;
+  padding: 1.25rem !important;
 }
 
 .rh-codeblock-wrapper pre[class*="language-"]::-webkit-scrollbar-track{

@@ -635,7 +635,7 @@ textarea.rh-form-control {
   @apply inline-flex aspect-square h-10 w-10 items-center justify-center rounded-lg bg-primary text-white;
 }
 .rh-step-list-item-icon-line {
-  @apply h-full w-px bg-body-light-a6 dark:bg-body-dark-a6;
+  @apply w-px flex-1 bg-body-light-a6 dark:bg-body-dark-a6;
 }
 .rh-step-list-item:last-child .rh-step-list-item-icon-line {
   @apply hidden;
@@ -816,10 +816,10 @@ textarea.rh-form-control {
   @apply relative;
 }
 .rh-codeblock-wrapper pre[class*="language-"] {
-  @apply m-0 overflow-auto bg-inherit p-5 focus-visible:ring-1;
+  @apply m-0 bg-inherit focus-visible:ring-1;
 }
 .rh-codeblock-wrapper code[class*="language-"] {
-  @apply overflow-visible !bg-transparent !p-0;
+  @apply !bg-transparent !p-5;
 }
 .rh-codeblock-wrapper pre[class*="language-"]::-webkit-scrollbar-track {
   @apply bg-primary-dark-2;
