@@ -3315,12 +3315,12 @@ textarea.rh-form-control{
   padding: 1.25rem !important;
 }
 
-.rh-codeblock-wrapper pre[class*="language-"]::-webkit-scrollbar-track{
+.rh-codeblock-wrapper code[class*="language-"]::-webkit-scrollbar-track{
   --tw-bg-opacity: 1;
   background-color: rgb(14 24 40 / var(--tw-bg-opacity));
 }
 
-.rh-codeblock-wrapper pre[class*="language-"]::-webkit-scrollbar-thumb{
+.rh-codeblock-wrapper code[class*="language-"]::-webkit-scrollbar-thumb{
   --tw-border-opacity: 1;
   border-color: rgb(14 24 40 / var(--tw-border-opacity));
   background-color: #e0e3fd60;

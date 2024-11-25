@@ -821,10 +821,10 @@ textarea.rh-form-control {
 .rh-codeblock-wrapper code[class*="language-"] {
   @apply !bg-transparent !p-5;
 }
-.rh-codeblock-wrapper pre[class*="language-"]::-webkit-scrollbar-track {
+.rh-codeblock-wrapper code[class*="language-"]::-webkit-scrollbar-track {
   @apply bg-primary-dark-2;
 }
-.rh-codeblock-wrapper pre[class*="language-"]::-webkit-scrollbar-thumb {
+.rh-codeblock-wrapper code[class*="language-"]::-webkit-scrollbar-thumb {
   @apply border-primary-dark-2 bg-body-dark-a8;
 }
 pre[class*="language-"],
